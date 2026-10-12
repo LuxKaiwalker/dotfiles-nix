@@ -1,0 +1,64 @@
+/* wlogout old style with fonts*/
+
+
+
+/* Import your Waybar Palette */
+@define-color bg_glass rgba(10, 14, 10, 0.9);
+@define-color fg_fog   #e0eadd;
+@define-color border_mist rgba(124, 148, 115, 0.2);
+@define-color accent_wood #a68a64;
+@define-color shutdown_red #8b4444;
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.4); /* Subtle screen dim */
+}
+
+button {
+    color: @fg_fog;
+    background-color: @bg_glass;
+    outline-style: none;
+    border: 1px solid @border_mist;
+    border-radius: 15px; /* Matches your Waybar rounding */
+    margin: 12px;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: 50px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+/* Label text positioning */
+button text {
+    margin-top: 80px; 
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Hover & Focus states */
+button:focus,
+button:active,
+button:hover {
+    background-color: rgba(30, 40, 30, 0.7);
+    border-color: @accent_wood;
+    color: @accent_wood;
+}
+
+/* Special color for Shutdown to match your Waybar power icon */
+#shutdown:hover {
+    border-color: @shutdown_red;
+    color: @shutdown_red;
+}
+
+/* Icon Paths - Adjust if your icons are in a different folder */
+#lock      { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#logout    { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#suspend   { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#hibernate { background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
+#reboot    { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
+#shutdown  { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }

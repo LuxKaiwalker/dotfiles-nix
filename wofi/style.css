@@ -1,0 +1,74 @@
+* {
+    font-family: Inter, Segoe UI, sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 6px;
+}
+
+/* Tight and predictable spacing */
+#outer-box {
+    margin: 6px;
+}
+
+#input {
+    padding: 6px 8px;
+    margin-bottom: 6px;
+
+    background-color: #1a1a1a;
+    color: #ffffff;
+
+    border: 1px solid #444444;
+    border-radius: 6px;
+
+    outline: none;
+}
+
+#input:focus {
+    border-color: #888888;
+}
+
+/* No vertical margin changes while filtering */
+#inner-box {
+    margin: 0;
+}
+
+/* Fixed padding, no font changes */
+#entry {
+    padding: 6px 8px;
+    color: #e0e0e0;
+    border-radius: 6px;
+}
+
+/* Selection only changes background + color */
+#entry:selected {
+    background-color: #2a2a2a;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+}
+
+/* Keep text layout constant */
+#text {
+    margin-left: 8px;
+}
+
+/* Secondary text: fixed size, no em */
+#text:last-child {
+    color: #777777;
+    font-size: 13px;
+}
+
+/* Icons kept but harmless */
+#img {
+    margin-right: 8px;
+    filter: grayscale(100%);
+}
+
+#scroll {
+    margin-top: 4px;
+}

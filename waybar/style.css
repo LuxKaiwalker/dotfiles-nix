@@ -1,0 +1,79 @@
+@define-color bg_glass rgba(10, 14, 10, 0.85);
+@define-color fg_fog   #e0eadd;
+@define-color border_mist rgba(135, 135, 135, 0.15);
+@define-color accent_wood #a68a64;
+@define-color border_mist_dark rgba(135, 135, 135, 0.55);
+
+* {
+  font-family: "JetBrainsMono Nerd Font Mono", "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+window#waybar {
+  background: @bg_glass;
+  border: none;
+  border-right: 1px solid @border_mist_dark;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Workspaces */
+#workspaces {
+  margin-top: 10px;
+}
+
+#workspaces button {
+  font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 2px 2px; 
+  color: rgba(243, 247, 240, 0.45);
+  font-size: 1px;
+}
+
+#workspaces button.active {
+  font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+  color: @fg_fog;
+  font-size: 1px;
+}
+
+#workspaces button.urgent {
+  background: #8b4444;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Center window text */
+#window {
+  font-size: 13px;
+  color: @fg_fog;
+}
+
+/* System icons */
+#custom-net-monitor, #network, #cpu, #wireplumber {
+  font-size: 28px;
+  color: @fg_fog;
+  padding: 8px 0px;
+}
+
+#bluetooth {
+  font-size: 20px;
+  color: @fg_fog;
+  padding: 8px 0px;
+}
+
+#clock {
+  font-size: 15px;
+  font-weight: bold;
+  color: @fg_fog;
+  padding: 14px 0px;
+}
+
+#custom-power {
+  font-size: 28px;
+  color: @fg_fog;
+  padding-bottom: 16px;
+}
