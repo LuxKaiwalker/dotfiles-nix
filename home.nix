@@ -69,11 +69,22 @@ in
     firefox
     gsimplecal
     git
+    jq
     kitty
     nemo
     pavucontrol
+    procps
     wl-clipboard
   ];
+
+  # SUPER+A waybar toggle (see hypr/hyprland.conf); hl.bind'd directly in
+  # Lua on the Arch side (~/coding/dotfiles/hypr/conf/statusbar.lua), but
+  # hyprlang has no scripting of its own, so this hands the script to
+  # hyprctl exec via home.file instead.
+  home.file.".local/bin/waybar-toggle" = {
+    source = ./hypr/waybar-toggle.sh;
+    executable = true;
+  };
 
   programs.home-manager.enable = true;
 
